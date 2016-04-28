@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var multipleLbl: UILabel!
     
 // Actions
+    @IBAction func onAddTapped(sender: UIButton) {
+        
+    }
+    
     @IBAction func onPlayButtonPressed(sender: UIButton!) {
        
         
