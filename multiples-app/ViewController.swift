@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     
 // Actions
     @IBAction func onAddTapped(sender: UIButton) {
-        
+        currentMultiple = maxMultiple + currentMultiple;
+        multipleLbl.text = "\(currentMultiple) + \(maxMultiple) = \(currentMultiple)"
     }
     
     @IBAction func onPlayButtonPressed(sender: UIButton!) {
