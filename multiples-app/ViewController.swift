@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 // Variables
     var maxMultiple = 0
     var currentMultiple = 0
+    var newMultiple = 0
 
 // Outlets
     @IBOutlet weak var multLogo: UIImageView!
@@ -23,8 +24,9 @@ class ViewController: UIViewController {
     
 // Actions
     @IBAction func onAddTapped(sender: UIButton) {
-        currentMultiple = maxMultiple + currentMultiple;
-        multipleLbl.text = "\(currentMultiple) + \(maxMultiple) = \(currentMultiple)"
+        newMultiple = maxMultiple + currentMultiple;
+        updateAddLbl();
+        currentMultiple = newMultiple;
     }
     
     @IBAction func onPlayButtonPressed(sender: UIButton!) {
@@ -43,13 +45,20 @@ class ViewController: UIViewController {
             maxMultiple = Int(multipleTxt.text!)! // Validation
             currentMultiple = 0
             
-            multipleLbl.text = "\(currentMultiple) + \(maxMultiple) = \(currentMultiple)";
-            currentMultiple += maxMultiple;
+            updateAddLbl();
             
         }
     }
     
+    func updateAddLbl() {
+        multipleLbl.text = "\(currentMultiple) + \(maxMultiple) = \(newMultiple)";
+    }
 
 
 }
+
+
+
+
+
 
