@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         newMultiple = maxMultiple + currentMultiple;
         updateAddLbl();
         currentMultiple = newMultiple;
+        
+        if isGameOver() {
+            restartGame()
+        }
     }
     
     @IBAction func onPlayButtonPressed(sender: UIButton!) {
@@ -49,6 +53,27 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    func restartGame() {
+        currentMultiple = 0
+        multipleTxt.text = ""
+        
+        multLogo.hidden = false
+        playBtn.hidden = false
+        multipleTxt.hidden = false
+        
+        addBtn.hidden = true
+        multipleLbl.hidden = true
+    }
+    
+    func isGameOver() -> Bool {
+        if newMultiple >= maxMultiple * 11 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     
     func updateAddLbl() {
         multipleLbl.text = "\(currentMultiple) + \(maxMultiple) = \(newMultiple)";
