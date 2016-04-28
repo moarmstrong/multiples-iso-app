@@ -50,6 +50,9 @@
                                     <constraint firstAttribute="height" constant="101" id="Ts0-s4-8mP"/>
                                 </constraints>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="onAddTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7R9-jq-Zvu"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGU-gn-DdJ" userLabel="multipleLbl">
                                 <rect key="frame" x="105" y="121" width="391" height="65"/>
